@@ -11,7 +11,7 @@ export class ScoreApiService {
 
   async getTournamentData(tournamentID: string, serverID: string): Promise<ScoreObject> {
     return new Promise<ScoreObject>(async (resolve) => {
-      var response = await this.http.get("https://run.mocky.io/v3/4e44c9b2-2051-41f7-842e-c2464ddde325" ).toPromise().catch(e => { return null; });
+      var response = await this.http.get("https://us-central1-megagaming-backend-api-hosting.cloudfunctions.net/app/api/bot/tournaments/data/serverid=568904661885779971&tourneyid=schq1final" ).toPromise().catch(e => { return null; });
       if (response != null) {
         resolve(response);
       }
