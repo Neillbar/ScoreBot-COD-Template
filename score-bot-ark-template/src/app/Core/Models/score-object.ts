@@ -45,6 +45,7 @@ export interface Player {
 
   scoreList?: number[];
   overallScore?: number;
+  rank?: number;
 }
 
 export interface ScoreObject {
