@@ -1,0 +1,92 @@
+// #region Variables
+$bg: url('/assets/Background.jpg')
+$arrow: url('/assets/Ark green.png')
+$arrow-2: url('/assets/Ark blue.png')
+
+$color-green: lime
+$color-blue: #3a9ddf
+
+$padding-small: 6px
+
+// #endregion Variables
+
+.root
+  background-image: $arrow, $arrow-2, $bg
+  background-position: top left, bottom right, top center
+  background-size: auto 100px, auto 100px, cover
+  background-repeat: no-repeat
+  width: 100%
+  height: 100%
+  padding: 4em
+  *
+    scrollbar-width: thin
+
+.logo
+  position: fixed
+  top: 0
+  right: 0
+  height: 150px
+  object-fit: cover
+  background-color: rgba(#000, 0)
+
+
+
+.container
+  background-color: rgba(#000, 0)
+  width: 100%
+  height: 100%
+  padding: 1em
+
+  margin: auto
+  max-width: 1920px
+  overflow: hidden
+
+  display: grid
+  grid-template-rows: max-content 1fr
+  grid-template-columns: minmax(200px, 40vw) 1fr
+  grid-template-areas: "header header" "standings details"
+  row-gap: 1em
+
+
+  color: #fff
+  font-size: 1.2em
+
+  .standings
+    grid-area: standings
+    overflow: hidden
+    height: 100%
+    margin-right: 1em
+
+  .details
+    grid-area: details
+
+
+header
+  grid-area: header
+
+.super-title, .title
+  color: #fff
+  font-weight: bolder
+  text-shadow: 2px 0 4px rgba($color-blue, 0.86)
+
+.list
+  list-style: none
+  height: 100%
+  overflow-y: auto
+  &__item
+    padding: $padding-small
+    &:hover
+      background-color: rgba(#fff, 0.35)
+
+.details
+  *
+    animation: fade-up 400ms forwards
+
+
+@keyframes fade-up
+  from
+    transform: translateY(1em)
+    opacity: 0
+  from
+    transform: translateY(1em)
+    opacity: 0
