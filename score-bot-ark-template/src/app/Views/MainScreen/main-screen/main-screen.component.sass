@@ -21,6 +21,7 @@ $padding-small: 6px
   *
     scrollbar-width: thin
 
+
 .logo
   position: fixed
   top: 0
@@ -28,7 +29,6 @@ $padding-small: 6px
   height: 150px
   object-fit: cover
   background-color: rgba(#000, 0)
-
 
 
 .container
@@ -46,7 +46,6 @@ $padding-small: 6px
   grid-template-columns: minmax(200px, 40vw) 1fr
   grid-template-areas: "header header" "standings details"
   row-gap: 1em
-
 
   color: #fff
   font-size: 1.2em
@@ -82,11 +81,15 @@ header
   *
     animation: fade-up 400ms forwards
 
+// #region Animations
 
 @keyframes fade-up
   from
     transform: translateY(1em)
     opacity: 0
   from
-    transform: translateY(1em)
-    opacity: 0
+    transform: translateY(0)
+    opacity: 1
+
+
+// #endregion Animations
