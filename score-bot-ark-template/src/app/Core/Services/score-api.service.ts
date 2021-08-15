@@ -10,8 +10,9 @@ export class ScoreApiService {
   constructor(private http: HttpClient) { }
 
   async getTournamentData(tournamentID: string, serverID: string): Promise<ScoreObject> {
+    console.log(`https://us-central1-megagaming-backend-api-hosting.cloudfunctions.net/app/api/bot/tournaments/data/serverid=${tournamentID}&tourneyid=${serverID}`)
     return new Promise<ScoreObject>(async (resolve) => {
-      var response = await this.http.get("https://us-central1-megagaming-backend-api-hosting.cloudfunctions.net/app/api/bot/tournaments/data/serverid=568904661885779971&tourneyid=schq1final" ).toPromise().catch(e => { return null; });
+      var response = await this.http.get(`https://us-central1-megagaming-backend-api-hosting.cloudfunctions.net/app/api/bot/tournaments/data/serverid=${serverID}&tourneyid=${tournamentID}` ).toPromise().catch(e => { return null; });
       if (response != null) {
         resolve(response);
       }

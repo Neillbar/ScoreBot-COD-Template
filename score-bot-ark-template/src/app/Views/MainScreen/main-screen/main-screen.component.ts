@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Player, ScoreObject } from 'src/app/Core/Models/score-object';
 import { ScoreApiService } from 'src/app/Core/Services/score-api.service';
 import { isScoreValue } from 'src/app/Lib';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main-screen',
@@ -11,14 +13,27 @@ import { isScoreValue } from 'src/app/Lib';
 export class MainScreenComponent implements OnInit {
   gameData: ScoreObject;
   loading: boolean = true;
-
+  tournamentID?: string;
+  serverID?: string;
   players: Player[];
   currentPlayer?: Player;
 
-  constructor(private service: ScoreApiService) {}
+  constructor(private service: ScoreApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.setServerAndTourneyID();
     this.getGameData();
+  }
+
+  setServerAndTourneyID() {
+    this.serverID = this.route.params['value']['id'];
+    this.tournamentID = this.route.params['value']['tourneyid'];
+
+    //THIS CODE IS TEMPORARY AND MUST BE REMOVED BEFORE PROD
+    if(this.serverID == null  || this.tournamentID == null && environment.production ) {
+      this.serverID = "568904661885779971"
+      this.tournamentID = "schq1final"
+    }
   }
 
   showPlayerDetails(player: Player, index: number): void {
@@ -27,7 +42,7 @@ export class MainScreenComponent implements OnInit {
   }
 
   async getGameData() {
-    this.gameData = await this.service.getTournamentData('', '');
+    this.gameData = await this.service.getTournamentData(this.tournamentID, this.serverID);
     if (this.gameData != null) {
       console.log(this.gameData);
 
