@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainScreenComponent } from './Views/MainScreen/main-screen/main-screen.component';
 
 const routes: Routes = [
-  {path: 'tournament/serverid=:id/tournamentid:tourneyid', component: MainScreenComponent},
+  {path: 'tournament/:id/:tourneyid', component: MainScreenComponent},
 ];
 
 @NgModule({
@@ -11,3 +11,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+// http://fortnitescorebot.com/tournament/568904661885779971/scq7
