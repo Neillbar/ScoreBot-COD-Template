@@ -4,6 +4,8 @@ import { MainScreenComponent } from './Views/MainScreen/main-screen/main-screen.
 
 const routes: Routes = [
   {path: 'tournament/:id/:tourneyid', component: MainScreenComponent},
+
+  {path: '**', component: MainScreenComponent},
 ];
 
 @NgModule({
