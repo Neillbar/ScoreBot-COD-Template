@@ -1,6 +1,13 @@
 {
   "hosting": {
     "public": "dist/score-bot-ark-template",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "http",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
