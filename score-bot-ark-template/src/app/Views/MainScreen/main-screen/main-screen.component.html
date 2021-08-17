@@ -12,7 +12,8 @@
         <ng-container *ngFor="let player of players; let i = index">
           <li class="list__item" (click)="showPlayerDetails(player, i)">
             <span class="rank">#{{ i + 1 }}</span>
-            <span> {{ player?.Username }}</span>
+            <span class="name"> {{ player?.Username }}</span>
+            <span class="score"> {{ player?.overallScore }}</span>
           </li>
         </ng-container>
       </ul>

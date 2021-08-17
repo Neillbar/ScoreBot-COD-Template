@@ -4,8 +4,8 @@ $arrow: url('/assets/Ark green.png')
 $arrow-2: url('/assets/Ark blue.png')
 $legion-logo: url('/assets/Legion-Wht-Solid.png')
 
-$color-green: lime
-$color-blue: #3a9ddf
+$color-green: #14F48D
+$color-blue: #00D6EF
 
 $padding-small: 6px
 
@@ -53,10 +53,16 @@ $padding-small: 6px
     grid-area: standings
     overflow: hidden
     height: 100%
-    margin-right: 1em
+    margin-right: 2vw
 
     .rank
+      font-weight: normal
       margin-right: 1em
+    .name
+      // color: $color-blue
+    .score
+      // color: $color-green
+      margin-left: auto
 
   .details
 
@@ -97,9 +103,15 @@ header
     margin-bottom: .2em
     cursor: pointer
     transition: 256ms
+    display: flex
+    border-bottom: 1px solid rgba(#fff, 0.16)
 
     &:hover
       background-color: rgba(#fff, 0.35)
+      .name
+        color: $color-blue
+      .score
+        color: $color-green
 
 .details
   transition: 256ms !important
