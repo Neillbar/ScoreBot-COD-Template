@@ -1,38 +1,55 @@
 <main class="root">
-    <img class="logo" src="assets/Ark_Logo_pre_approved-10.png" />
-    <div class="container">
-        <header>
-            <h1 class="super-title">CWT Nationals - 1A</h1>
-        </header>
-        <section class="standings">
-            <ul class="standings__list list">
-                <ng-container *ngFor="let player of players; let i = index">
-                    <li class="list__item" (click)="showPlayerDetails(player, i)">
-                        <span>#{{ i + 1 }}</span>
-                        <span> {{ player?.Username }}</span>
-                    </li>
-                </ng-container>
-            </ul>
-        </section>
-        <section class="details">
-            <ng-container *ngIf="currentPlayer; else tournamentState">
-                <ng-container *ngTemplateOutlet="playerStats"></ng-container>
-            </ng-container>
-        </section>
-    </div>
+  <img class="logo" src="assets/Ark_Logo_pre_approved-10.png" />
+  <div class="container">
+    <header>
+      <h1 class="super-title">CWT Nationals - 1A</h1>
+    </header>
+    <section class="standings">
+      <ul class="standings__list list">
+        <ng-container *ngFor="let player of players; let i = index">
+          <li class="list__item" (click)="showPlayerDetails(player, i)">
+            <span class="rank">#{{ i + 1 }}</span>
+            <span> {{ player?.Username }}</span>
+          </li>
+        </ng-container>
+      </ul>
+    </section>
+    <section class="details">
+      <ng-container *ngIf="currentPlayer; else tournamentState">
+        <ng-container *ngTemplateOutlet="playerStats"></ng-container>
+      </ng-container>
+    </section>
+  </div>
 </main>
 
 <ng-template #playerStats>
-    <h2 class="title">Player Stats</h2>
-    <p>Username: {{ currentPlayer?.Username }}</p>
-    <p>Tournament Rank: {{ currentPlayer?.rank }}</p>
-    <p>Average Score: {{ getAverage(currentPlayer) }}</p>
-    <p>Total Points: {{ currentPlayer?.overallScore }}</p>
+  <h2 class="title">Player Stats</h2>
+  <p class="value">
+    <span>Username:</span> <span>{{ currentPlayer?.Username }}</span>
+  </p>
+  <p class="value">
+    <span>Tournament Rank:</span> <span>{{ currentPlayer?.rank }}</span>
+  </p>
+  <p class="value">
+    <span>Average Score:</span> <span>{{ getAverage(currentPlayer) }}</span>
+  </p>
+  <p class="value">
+    <span>Total Points:</span> <span>{{ currentPlayer?.overallScore }}</span>
+  </p>
 </ng-template>
 
 <ng-template #tournamentState>
-    <h2 class="title">Tournament Stats</h2>
-    <p>Registered Players: {{ gameData?.players?.length || 0 }}</p>
-    <p>Type: {{ gameData?.info.type }}</p>
-    <p>Rounds: {{ gameData?.info.rounds }}</p>
+  <h2 class="title">Tournament Stats</h2>
+  <p class="value">
+    <span>Registered Players: </span>
+    <span>{{ gameData?.players?.length || 0 }}</span>
+  </p>
+  <p class="value">
+    <span>Type: </span>
+    <span>{{ gameData?.info.type }}</span>
+  </p>
+  <p class="value">
+    <span>Rounds: </span>
+    <span>{{ gameData?.info.rounds }}</span>
+  </p>
 </ng-template>
