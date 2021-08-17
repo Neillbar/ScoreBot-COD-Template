@@ -1,17 +1,84 @@
-[debug] [2021-08-16T12:15:28.879Z] ----------------------------------------------------------------------
-[debug] [2021-08-16T12:15:28.880Z] Command:       /usr/local/bin/firebase /Users/neillbarnard/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
-[debug] [2021-08-16T12:15:28.880Z] CLI Version:   9.3.0
-[debug] [2021-08-16T12:15:28.880Z] Platform:      darwin
-[debug] [2021-08-16T12:15:28.880Z] Node Version:  v12.18.1
-[debug] [2021-08-16T12:15:28.886Z] Time:          Mon Aug 16 2021 14:15:28 GMT+0200 (South Africa Standard Time)
-[debug] [2021-08-16T12:15:28.887Z] ----------------------------------------------------------------------
-[debug] [2021-08-16T12:15:28.887Z] 
-[debug] [2021-08-16T12:15:28.894Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2021-08-16T12:15:28.895Z] > authorizing via signed-in user
-[debug] [2021-08-16T12:15:28.895Z] [iam] checking project scorebot-89456 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2021-08-16T12:15:28.899Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scorebot-89456:testIamPermissions  
+[debug] [2021-08-17T19:21:09.568Z] ----------------------------------------------------------------------
+[debug] [2021-08-17T19:21:09.570Z] Command:       /usr/local/bin/firebase /Users/neillbarnard/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2021-08-17T19:21:09.570Z] CLI Version:   9.3.0
+[debug] [2021-08-17T19:21:09.570Z] Platform:      darwin
+[debug] [2021-08-17T19:21:09.570Z] Node Version:  v12.18.1
+[debug] [2021-08-17T19:21:09.576Z] Time:          Tue Aug 17 2021 21:21:09 GMT+0200 (South Africa Standard Time)
+[debug] [2021-08-17T19:21:09.577Z] ----------------------------------------------------------------------
+[debug] [2021-08-17T19:21:09.577Z] 
+[debug] [2021-08-17T19:21:09.585Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-17T19:21:09.586Z] > authorizing via signed-in user
+[debug] [2021-08-17T19:21:09.586Z] [iam] checking project scorebot-89456 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-08-17T19:21:09.589Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scorebot-89456:testIamPermissions  
  {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2021-08-16T12:15:31.221Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 16 Aug 2021 12:15:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1531","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2021-08-16T12:15:31.225Z] > refreshing access token with scopes: []
-[debug] [2021-08-16T12:15:31.225Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2021-08-17T19:21:11.587Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 17 Aug 2021 19:21:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1496","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-17T19:21:11.589Z] > refreshing access token with scopes: []
+[debug] [2021-08-17T19:21:11.589Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
+[debug] [2021-08-17T19:21:12.089Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 17 Aug 2021 19:21:12 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-17T19:21:12.114Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scorebot-89456 [none]
+[debug] [2021-08-17T19:21:12.771Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/scorebot-89456 200
+[debug] [2021-08-17T19:21:12.771Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/scorebot-89456 {"projectId":"scorebot-89456","projectNumber":"945026123869","displayName":"ScoreBot","name":"projects/scorebot-89456","resources":{"hostingSite":"scorebot-89456"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'scorebot-89456'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-08-17T19:21:12.774Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-17T19:21:12.774Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-17T19:21:13.258Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 17 Aug 2021 19:21:13 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-17T19:21:13.280Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-08-17T19:21:15.989Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 17 Aug 2021 19:21:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[scorebot-89456]: beginning deploy... 
+[info] i  hosting[scorebot-89456]: found 12 files in dist/score-bot-ark-template 
+[debug] [2021-08-17T19:21:16.002Z] > refreshing access token with scopes: []
+[debug] [2021-08-17T19:21:16.003Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-17T19:21:16.005Z] [hosting] hash cache [ZGlzdC9zY29yZS1ib3QtYXJrLXRlbXBsYXRl] stored for 12 files
+[debug] [2021-08-17T19:21:16.006Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":8}
+[debug] [2021-08-17T19:21:16.484Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 17 Aug 2021 19:21:17 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-17T19:21:16.508Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/versions/7c787b8797bbff6b:populateFiles [none]
+[debug] [2021-08-17T19:21:16.508Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/versions/7c787b8797bbff6b:populateFiles {"files":{"/3rdpartylicenses.txt":"0a5140205f87b88640c51d08c5a56e49f669da7fea1ff9e1a4e977169445818d","/favicon.ico":"a2aee5309d0b59b9b66384ccc3969a07fab1b320d0bf76f1b25047a051d7f774","/index.html":"0f755a228217fd8375e7dd31e6e360b1a8dade97524465d6e379cf0779b532a8","/main.b1c3a48ee33fd44320f2.js":"a8687cc265657e8132938fd60f343e2a9e6c843d5fe6c0db72cdc58488a7af35","/polyfills.00096ed7d93ed26ee6df.js":"392274cf3b12572bbc29c65f6c1863f18938801875473eb09ab63f9bd0803157","/runtime.7b63b9fd40098a2e8207.js":"c4aa0a348c0dcf9c6af4b7b3f066d0599bcec97472ed96ab232c8dceb70607cb","/styles.b3ef652ec6fca9c477a0.css":"de28760a79d64f7452b3936ed75a47d1f4ba1040c6f332a26cbc197fd9d9ba9c","/assets/Ark blue.png":"4afd51794c6b3870d6538c70a5eb09cc72b71628a4a9e7f7724f644a3d41fc13","/assets/Ark green.png":"67dec1b49569e3a92ddaae3520322250d92fd45a431ca36ae9887bb93da99e2b","/assets/Ark_Logo_pre_approved-10.png":"f8856ce37d681eee243427c82d6eaf598b4fe79ce75b49d2a3c79ecb3b2ad83d","/assets/Background.jpg":"46bb53513e22394d3f7c60cd3653ef583e3ff489e5c20d7cc9bea03594fbdcdd","/assets/Legion-Wht-Solid.png":"bdba3bdae45b9f667ffafd23bb00946c568a44d8c1d8e0d812b7e6173787b0d4"}}
+[debug] [2021-08-17T19:21:18.787Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/versions/7c787b8797bbff6b:populateFiles 200
+[debug] [2021-08-17T19:21:18.788Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/versions/7c787b8797bbff6b:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/scorebot-89456/versions/7c787b8797bbff6b/files"}
+[debug] [2021-08-17T19:21:18.788Z] [hosting][populate queue][FINAL] {"max":2786,"min":2786,"avg":2786,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2786}
+[debug] [2021-08-17T19:21:18.788Z] [hosting] uploads queued: 0
+[debug] [2021-08-17T19:21:18.788Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1629228078788}
+[info] ✔  hosting[scorebot-89456]: file upload complete 
+[debug] [2021-08-17T19:21:18.789Z] [hosting] deploy completed after 2800ms
+[debug] [2021-08-17T19:21:19.337Z] [
+  {
+    "config": {
+      "public": "dist/score-bot-ark-template",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "http",
+          "destination": "/index.html"
+        }
+      ],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "scorebot-89456"
+    },
+    "site": "scorebot-89456",
+    "version": "sites/scorebot-89456/versions/7c787b8797bbff6b"
+  }
+]
+[info] i  hosting[scorebot-89456]: finalizing version... 
+[debug] [2021-08-17T19:21:19.337Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-17T19:21:19.337Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-17T19:21:19.895Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 17 Aug 2021 19:21:20 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-17T19:21:19.923Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/versions/7c787b8797bbff6b?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-08-17T19:21:21.084Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 17 Aug 2021 19:21:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-17T19:21:21.084Z] [hosting] finalized version for scorebot-89456: {"name":"sites/scorebot-89456/versions/7c787b8797bbff6b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-08-17T19:21:15.946120Z","createUser":{"email":"neill.barnard@gmail.com"},"finalizeTime":"2021-08-17T19:21:21.538273Z","finalizeUser":{"email":"neill.barnard@gmail.com"}}
+[info] ✔  hosting[scorebot-89456]: version finalized 
+[info] i  hosting[scorebot-89456]: releasing new version... 
+[debug] [2021-08-17T19:21:21.085Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/scorebot-89456/releases?version_name=sites/scorebot-89456/versions/7c787b8797bbff6b  
+ {"message":null}
