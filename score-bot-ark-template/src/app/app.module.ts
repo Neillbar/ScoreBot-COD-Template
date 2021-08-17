@@ -6,16 +6,13 @@ import { AppComponent } from './app.component';
 import { MainScreenComponent } from './Views/MainScreen/main-screen/main-screen.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainScreenComponent
-  ],
+  declarations: [AppComponent, MainScreenComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
