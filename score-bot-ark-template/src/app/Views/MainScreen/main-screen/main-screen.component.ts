@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Player, ScoreObject } from 'src/app/Core/Models/score-object';
 import { ScoreApiService } from 'src/app/Core/Services/score-api.service';
 import { isScoreValue } from 'src/app/Lib';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main-screen',
