@@ -18,6 +18,8 @@ export class MainScreenComponent implements OnInit {
   players: Player[];
   currentPlayer?: Player;
 
+  shouldAnimate = false;
+
   constructor(
     private service: ScoreApiService,
     private route: ActivatedRoute
@@ -42,9 +44,15 @@ export class MainScreenComponent implements OnInit {
     }
   }
 
+  //Click username
   showPlayerDetails(player: Player, index: number): void {
-    this.currentPlayer = null;
+    this.shouldAnimate = false;
+
     this.currentPlayer = { ...player, rank: player.rank || index + 1 };
+
+    setTimeout(() => {
+      this.shouldAnimate = true;
+    }, 400);
   }
 
   async getGameData() {
@@ -53,7 +61,8 @@ export class MainScreenComponent implements OnInit {
       this.serverID
     );
     if (this.gameData != null) {
-      console.log(this.gameData);2
+      console.log(this.gameData);
+      2;
 
       this.players = this.gameData.players
         .map(this.mergeScores)

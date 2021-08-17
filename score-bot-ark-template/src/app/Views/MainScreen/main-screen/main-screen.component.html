@@ -6,6 +6,8 @@
     </header>
     <section class="standings">
       <ul class="standings__list list">
+        <!-- (animationend)="setShouldAnimate('details', false)" -->
+        <!-- <pre>{{ shouldAnimateTargets | json }}</pre> -->
         <ng-container *ngFor="let player of players; let i = index">
           <li class="list__item" (click)="showPlayerDetails(player, i)">
             <span class="rank">#{{ i + 1 }}</span>
@@ -14,7 +16,10 @@
         </ng-container>
       </ul>
     </section>
-    <section class="details">
+    <section
+      class="details"
+      [ngClass]="currentPlayer && { show: shouldAnimate, hide: !shouldAnimate }"
+    >
       <ng-container *ngIf="currentPlayer; else tournamentState">
         <ng-container *ngTemplateOutlet="playerStats"></ng-container>
       </ng-container>

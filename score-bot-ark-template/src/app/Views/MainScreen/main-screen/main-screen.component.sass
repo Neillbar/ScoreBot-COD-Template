@@ -59,7 +59,9 @@ $padding-small: 6px
       margin-right: 1em
 
   .details
+
     grid-area: details
+    transition: 256ms
 
     .value
       width: max-content
@@ -78,7 +80,7 @@ header
 .super-title, .title
   color: #fff
   font-weight: bolder
-  text-shadow: 2px 0 4px rgba($color-blue, 0.86)
+  text-shadow: 8px 0 4px rgba($color-blue, 0.86)
   margin-bottom: .7em
 
 .list
@@ -95,10 +97,21 @@ header
       background-color: rgba(#fff, 0.35)
 
 .details
+  transition: 256ms !important
   *
-    animation: fade-up 400ms forwards
+    animation: fade-up 400ms
 
 // #region Animations
+
+.show
+  opacity: 1 !important
+  transform: translateY(0) !important
+  transition: 256ms ease-out !important
+
+.hide
+  opacity: 0 !important
+  transform: translateY(3em) !important
+  transition: 400ms ease-out !important
 
 @keyframes fade-up
   from
