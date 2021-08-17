@@ -103,18 +103,6 @@ header
   *
     animation: fade-up 400ms
 
-// #region Animations
-
-.show
-  opacity: 1 !important
-  transform: translateY(0) !important
-  transition: 256ms ease-out !important
-
-.hide
-  opacity: 0 !important
-  transform: translateY(3em) !important
-  transition: 256ms ease-out !important
-
 .dialog
   //Hidden for desktop layouts.
   display: none
@@ -176,6 +164,17 @@ header
 
   .dialog
     display: grid
+
+// #region Animations
+.show
+  opacity: 1 !important
+  transform: translateY(0) !important
+  transition: 256ms ease-out !important
+
+.hide
+  opacity: 0 !important
+  transform: translateY(3em) !important
+  transition: 256ms ease-out !important
 
 @keyframes fade-up
   from
