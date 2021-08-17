@@ -18,7 +18,10 @@ export class MainScreenComponent implements OnInit {
   players: Player[];
   currentPlayer?: Player;
 
-  constructor(private service: ScoreApiService, private route: ActivatedRoute) { }
+  constructor(
+    private service: ScoreApiService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.setServerAndTourneyID();
@@ -30,9 +33,12 @@ export class MainScreenComponent implements OnInit {
     this.tournamentID = this.route.params['value']['tourneyid'];
 
     //THIS CODE IS TEMPORARY AND MUST BE REMOVED BEFORE PROD
-    if(this.serverID == null  || this.tournamentID == null && environment.production ) {
-      this.serverID = "568904661885779971"
-      this.tournamentID = "schq1final"
+    if (
+      this.serverID == null ||
+      (this.tournamentID == null && environment.production)
+    ) {
+      this.serverID = '568904661885779971';
+      this.tournamentID = 'schq1final';
     }
   }
 
@@ -42,14 +48,17 @@ export class MainScreenComponent implements OnInit {
   }
 
   async getGameData() {
-    this.gameData = await this.service.getTournamentData(this.tournamentID, this.serverID);
+    this.gameData = await this.service.getTournamentData(
+      this.tournamentID,
+      this.serverID
+    );
     if (this.gameData != null) {
-      console.log(this.gameData);
+      console.log(this.gameData);2
 
       this.players = this.gameData.players
         .map(this.mergeScores)
         .sort(this.byHighestScore);
-      console.log(this.players);
+
       this.loading = false;
     }
   }
