@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Player, ScoreObject } from 'src/app/Core/Models/score-object';
 import { ScoreApiService } from 'src/app/Core/Services/score-api.service';
@@ -35,10 +35,7 @@ export class MainScreenComponent implements OnInit {
     this.tournamentID = this.route.params['value']['tourneyid'];
 
     //THIS CODE IS TEMPORARY AND MUST BE REMOVED BEFORE PROD
-    if (
-      this.serverID == null ||
-      (this.tournamentID == null && environment.production)
-    ) {
+    if (isDevMode()) {
       this.serverID = '568904661885779971';
       this.tournamentID = 'schq1final';
     }
@@ -47,7 +44,6 @@ export class MainScreenComponent implements OnInit {
   //Click username
   showPlayerDetails(player: Player, index: number): void {
     this.shouldAnimate = false;
-
 
     this.currentPlayer = { ...player, rank: player.rank || index + 1 };
 
@@ -104,8 +100,8 @@ export class MainScreenComponent implements OnInit {
 
   getAverage(player: Player) {
     const _average =
-      (player?.overallScore || 0) / player?.scoreList.length ?? 0;
-    return _average.toFixed(1);
+      (player?.overallScore || 0) / (player?.scoreList.length || 0);
+    return +_average.toFixed(1) || 0;
   }
 
   resetCurrentPlayer() {
