@@ -48,6 +48,7 @@ export class MainScreenComponent implements OnInit {
   showPlayerDetails(player: Player, index: number): void {
     this.shouldAnimate = false;
 
+
     this.currentPlayer = { ...player, rank: player.rank || index + 1 };
 
     setTimeout(() => {

@@ -69,12 +69,15 @@ $padding-small: 6px
   grid-template-columns: minmax(8em, 20vw) auto
   grid-auto-flow: column
   justify-content: space-between
-  gap: 3em
-  margin-bottom: .2em
+  gap: 2em
+  margin-bottom: .3em
 
   font-size: 1.2em
   font-weight: bolder
   color: #fff
+
+  span
+    white-space: nowrap
 
 header
   grid-area: header
@@ -136,7 +139,7 @@ header
     height: max-content
     background-color: rgba(#000, 0.76)
     transform: scale(1)
-    padding: 2em
+    padding: 2em 1.5em
     animation: fade-up 400ms
 
 // Responsive
@@ -155,12 +158,17 @@ header
     grid-template-columns: minmax(200px, 40vw) 1fr
     grid-template-areas: "header header" "standings standings"
 
-    font-size: 1em
+    font-size: 1.15em
     .details
       display: none
 
-  .super-title
-    font-size: 1.2em
+  .super-title, .title
+    font-size: 1.4em
+
+  .value
+    gap: .5em
+    span:first-of-type
+      font-weight: normal
 
   .dialog
     display: grid
