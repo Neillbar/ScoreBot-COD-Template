@@ -98,15 +98,16 @@ header
   list-style: none
   height: 100%
   overflow-y: auto
+
   &__item
     padding: $padding-small
     margin-bottom: .2em
     cursor: pointer
     transition: 256ms
     display: flex
-    border-bottom: 1px solid rgba(#fff, 0.16)
+    // border-bottom: 1px solid rgba(#fff, 0.16)
 
-    &:hover
+    &:hover, &--active
       background-color: rgba(#fff, 0.35)
       .name
         color: $color-blue
