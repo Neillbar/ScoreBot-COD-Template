@@ -106,4 +106,8 @@ export class MainScreenComponent implements OnInit {
       (player?.overallScore || 0) / player?.scoreList.length ?? 0;
     return _average.toFixed(1);
   }
+
+  resetCurrentPlayer() {
+    this.currentPlayer = null;
+  }
 }
