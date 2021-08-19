@@ -1,11 +1,10 @@
 <main class="root">
   <!-- !!TODO: Make this an href -->
-  <a href="https://www.thearkgaming.com/" target="_blank">
-    <img class="logo" src="assets/Ark_Logo_pre_approved-10.png" />
-  </a>
+
   <div class="container">
     <header>
-      <h1 class="super-title">CWT Nationals - {{ tournamentID }}</h1>
+      <h1 class="super-title">CWT Nationals - <wbr /> {{ tournamentID }}</h1>
+      <ng-container *ngTemplateOutlet="logos"></ng-container>
     </header>
     <section class="standings">
       <ul class="standings__list list">
@@ -31,6 +30,7 @@
       <ng-container *ngIf="currentPlayer; else tournamentState">
         <ng-container *ngTemplateOutlet="playerStats"></ng-container>
       </ng-container>
+      <ng-container *ngTemplateOutlet="logos"></ng-container>
     </section>
   </div>
 </main>
@@ -72,3 +72,10 @@
     <ng-container *ngTemplateOutlet="playerStats"></ng-container>
   </div>
 </div>
+
+<ng-template #logos>
+  <a href="https://www.thearkgaming.com/" target="_blank" class="logos">
+    <img class="img" src="assets/Ark_Logo_pre_approved-10.png" />
+    <img class="img img--legion" src="assets/Legion-Wht-Solid.png" />
+  </a>
+</ng-template>

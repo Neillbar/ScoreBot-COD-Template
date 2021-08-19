@@ -12,9 +12,9 @@ $padding-small: 6px
 // #endregion Variables
 
 .root
-  background-image: $arrow, $arrow-2, $legion-logo, $bg
+  background-image: $arrow, $arrow-2, $bg
   background-position: top left, bottom right, bottom left, top center
-  background-size: auto 160px, auto 160px, auto 30px, cover
+  background-size: auto 180px, auto 180px, cover
   background-repeat: no-repeat
   width: 100%
   height: 100%
@@ -22,14 +22,19 @@ $padding-small: 6px
   *
     scrollbar-width: thin
 
-.logo
-  position: fixed
-  top: 0
-  right: 0
-  height: 150px
-  object-fit: cover
-  background-color: rgba(#000, 0)
-
+.logos
+  // position: fixed
+  margin-top: 4em
+  margin-left: 6em
+  top: 45vh
+  right: 30vw
+  display: grid
+  gap: 1em
+  .img
+    width: 20vw
+    max-width: 300px
+    object-fit: cover
+    background-color: rgba(#000, 0)
 .container
   background-color: rgba(#000, 0.6)
   width: 100%
@@ -48,6 +53,10 @@ $padding-small: 6px
   color: #fff
   font-size: 1.7em
   font-weight: bolder
+
+  header
+    .logos
+      display: none
 
   .standings
     grid-area: standings
@@ -86,6 +95,8 @@ $padding-small: 6px
     white-space: nowrap
 
 header
+  display: flex
+  justify-content: space-between
   grid-area: header
 
 .super-title, .title
@@ -160,10 +171,20 @@ header
 
   .root
     padding: 0
-    background-size: auto 50px, auto 50px, auto 20px, cover
+    background-size: auto 50px, auto 50px, cover
 
-  .logo
-    height: 60px
+  .logos
+    display: grid !important
+    grid-auto-flow: column
+    margin: 0
+    margin: auto 0
+    margin-top: .5em
+    align-items: center
+    grid-auto-flow: column
+    gap: 8px
+
+    .img
+      width: 16vw
 
   .container
     display: grid
