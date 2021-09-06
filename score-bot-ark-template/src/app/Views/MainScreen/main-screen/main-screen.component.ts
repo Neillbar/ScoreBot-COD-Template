@@ -7,7 +7,7 @@ import { isScoreValue } from 'src/app/Lib';
 @Component({
   selector: 'app-main-screen',
   templateUrl: './main-screen.component.html',
-  styleUrls: ['./main-screen.component.sass'],
+  styleUrls: ['./main-screen.component.scss'],
 })
 export class MainScreenComponent implements OnInit {
   gameData: ScoreObject;
