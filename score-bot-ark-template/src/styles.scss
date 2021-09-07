@@ -9,8 +9,14 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  font-family: GothomBold;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: GothomBold;
+  src: url(assets/Fonts/GothamBold.otf) format("opentype");
 }
 ::-webkit-scrollbar {
   width: 0px;
