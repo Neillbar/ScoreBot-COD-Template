@@ -4,9 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainScreenComponent } from './Views/MainScreen/main-screen/main-screen.component';
+import { SchoolCupComponent } from './Views/school-cup/school-cup.component';
 
 @NgModule({
-  declarations: [AppComponent, MainScreenComponent],
+  declarations: [AppComponent, MainScreenComponent, SchoolCupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,84 @@
+<main class="root">
+    <!-- !!TODO: Make this an href -->
+  
+    <div class="container">
+      <header>
+        <h1 class="super-title">School Cup Finals 2021</h1>
+        <!-- <ng-container *ngTemplateOutlet="logos"></ng-container> -->
+      </header>
+      <section class="standings">
+        <ul class="standings__list list">
+          <ng-container *ngFor="let player of players; let i = index">
+            <li
+              class="list__item"
+              [ngClass]="{
+                'list__item--active': currentPlayer?.Username === player?.Username
+              }"
+              (click)="showPlayerDetails(player, i)"
+            >
+              <span class="rank">#{{ i + 1 }}</span>
+              <span class="name">{{ player?.Username }}</span>
+              <span class="score">{{ player?.overallScore }}</span>
+            </li>
+          </ng-container>
+        </ul>
+      </section>
+      <section
+        class="details"
+        [ngClass]="currentPlayer && { show: shouldAnimate, hide: !shouldAnimate }"
+      >
+        <ng-container *ngIf="currentPlayer; else tournamentState">
+          <ng-container *ngTemplateOutlet="playerStats"></ng-container>
+        </ng-container>
+        <!-- <ng-container *ngTemplateOutlet="logos"></ng-container> -->
+      </section>
+    </div>
+  </main>
+  
+  <ng-template #playerStats>
+    <h2 class="title">Player Stats</h2>
+    <p class="value">
+      <span>Username:</span> <span>{{ currentPlayer?.Username }}</span>
+    </p>
+    <p class="value">
+      <span>Tournament Rank:</span> <span>{{ currentPlayer?.rank }}</span>
+    </p>
+    <p class="value">
+      <span>Average Score:</span> <span>{{ getAverage(currentPlayer) }}</span>
+    </p>
+    <p class="value">
+      <span>Total Points:</span> <span>{{ currentPlayer?.overallScore }}</span>
+    </p>
+  </ng-template>
+  
+  <ng-template #tournamentState>
+    <h2 class="title">Tournament Stats</h2>
+    <p class="value">
+      <span>Registered Players: </span>
+      <span>{{ gameData?.players?.length || 0 }}</span>
+    </p>
+    <p class="value">
+      <span>Type: </span>
+      <span>{{ gameData?.info.type }}</span>
+    </p>
+    <p class="value">
+      <span>Rounds: </span>
+      <span>{{ gameData?.info.rounds }}</span>
+    </p>
+  </ng-template>
+  
+  <div class="dialog" *ngIf="currentPlayer" (click)="resetCurrentPlayer()">
+    <div class="dialog__content" (click)="$event.stopPropagation()">
+      <ng-container *ngTemplateOutlet="playerStats"></ng-container>
+    </div>
+  </div>
+  
+  <!-- <ng-template #logos>
+    <a href="https://www.thearkgaming.com/" target="_blank" class="logos">
+      <div
+        class="img img--combined"
+        style="--bg: url(assets/CWT_Legion_Banner.png)"
+      ></div>
+    </a>
+  </ng-template> -->
+  
