@@ -12,7 +12,7 @@
 
 .root {
     background-image: url("/assets/Ark green.png"), url("/assets/Ark blue.png"),
-      url("/assets/ScoreBoardBanner.pdf");
+      url("/assets/banner.png");
     background-position: top left, bottom right, bottom left, top center;
     background-size: auto 180px, auto 180px, cover;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@
   }
   
   .container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
     padding: 1em;

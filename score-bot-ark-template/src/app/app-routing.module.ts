@@ -8,7 +8,7 @@ const routes: Routes = [
 
   {path: 'schoolcup/:id/:tourneyid', component: SchoolCupComponent},
 
-  {path: '**', component: MainScreenComponent},
+  {path: '**', component: SchoolCupComponent},
 ];
 
 @NgModule({
